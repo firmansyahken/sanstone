@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --secondary-color:#F5F5F5;
+    --body-size: 14px;
+    --header-size: 16px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(images/bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.wrapper {
+    max-width: 920px;
+    margin: auto;
+    background-color: white;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+.info_section {
+    top: 0;
+    bottom: 0;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 25;
+    background-color: rgba(0,0,0,.3);
+}
+
+.info {
+    position: absolute;
+    z-index: 30;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 70%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.info i {
+    float: right;
+    font-size: 20px;
+}
+
+.info p {
+    margin-top: 20px;
+    font-size: var(--body-size);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    padding: 1rem 0;
+    background-color: white;
+    z-index: 20;
+}
+
+.navbar_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.navbar_content .brand {
+    font-size: var(--header-size);
+}
+
+.navbar_content .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background-color: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    column-gap: 10px;
+} 
+
+.navbar_content .search input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.main {
+    padding-top: 1rem;
+    padding-bottom: 7rem;
+}
+
+.main_content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
+.main_content .post {
+    width: 100%;
+}
+
+.main_content .post.active img {
+    filter: grayscale(50);
+}
+
+.main_content .post img {
+    width: 100%;
+    max-width: 195px;
+    max-height: 160px;
+    border-radius: 10px;
+}
+
+.main_content .post p {
+    font-size: var(--body-size);
+    font-weight: 600;
+    padding: 5px;
+}
+
+.music_player {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    max-width: 920px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    z-index: 20;
+    padding: 0;
+}
+
+.music_player_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding: 5px 0;
+}
+
+.music_player_content .detail {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+@keyframes rotate {
+    from{transform: rotate(0);}
+    to{transform: rotate(360deg);}
+}
+
+.music_player_content .detail img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.music_player_content .detail img.active {
+    animation: rotate 7000ms linear infinite;
+}
+
+.music_player_content .detail p {
+    font-size: var(--body-size);
+}
+
+.music_player .bar {
+    width: 100%;
+}
+
+.music_player .bar input {
+    width: 100%;
+    height: 5px;
+    background-color: #e3e3e3;
+    outline: none;
+    -webkit-appearance: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.music_player .bar input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 3%;
+    border-radius: 10px;
+    height: 5px;
+    background-color: #000;
+    box-shadow: -450px 0 0 450px#000;
+    cursor: pointer;
+}
+
+.music_player_content .control {
+    padding: 0 2rem;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+
+@media (max-width: 576px) {
+    :root {
+        --secondary-color:#F5F5F5;
+        --body-size: 13px;
+        --header-size: 14px
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .main {
+        padding-top: 1rem;
+        padding-bottom: 6rem;
+    }
+
+    .main_content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 25px;
+        row-gap: 40px;
+    }
+
+    .music_player_content {
+        padding: 5px 0;
+    }
+
+    .music_player_content .detail {
+        column-gap: 10px;
+    }
+
+    .music_player_content .detail img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .music_player_content .control {
+        padding: 0 1rem;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Playlist Music Anime"/>
+    <meta name="keywords" content="Playlist, Anime, Music, Programming"/>
+    <meta name="author" content="Pamekasancode (Sanscode)"/>
+    <meta property="og:title" content="Pamekasancode"/>
+    <title>Sanstone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" href="images/icon.svg" type="image/x-icon">
+</head>
+
+<body>
+
+    <section class="info_section">
+        <div class="info">
+            <i class="fa fa-times" onclick="infoClose()"></i>
+            <h3>Information</h3>
+            <p>Sanstone merupakan website playlist music anime / jepang santai yang cocok untuk menemanimu disaat ngoding atau
+                mengerjakan tugas dan PR sekolah. </p>
+        </div>
+    </section>
+        
+    <div class="wrapper">
+
+        <div class="navbar">
+            <div class="container">
+                <div class="navbar_content">
+                    <div class="brand">
+                        <h2>Sanstone</h2>
+                    </div>
+                    <div class="search">
+                        <input type="text" id="keyword" placeholder="Search Song ..." autocomplete="off">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="main">
+            <div class="container">
+                <div class="main_content">
+
+                </div>
+            </div>
+        </section>
+
+        <div class="music_player">
+            <div class="container">
+                <div class="bar">
+                    <input type="range" id="bar" max="100" min="0" step="1" value="0">
+                </div>
+                <div class="music_player_content">
+                    <div class="detail">
+                        <img id="cover" src="images/unknow.png" style="border-radius: 100%">
+                        <p id="title">Unknow</p>
+                    </div>
+                    
+                    <div class="control">
+                        <i class="fa fa-step-backward" id="button_back"></i>
+                        <i class="fa fa-play" id="button_control"></i>
+                        <i class="fa fa-step-forward" id="button_next"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
